@@ -4,16 +4,18 @@ console.log("js works");
 const slideShowImage = document.getElementById("slideShowImage");
 const prevButton = document.getElementById("prev-button");
 const nextButton = document.getElementById("next-button");
+let mySound = new Audio("./sounds/OKAY.mp3");
 
 
 let count = 0;
 
 nextButton.addEventListener("click", () => {
     updateImage("next");
-
+    mySound.play();
 })
 prevButton.addEventListener("click", () => {
     updateImage("prev");
+    mySound.play();
 })
 setInterval(printCountAndIncrement, 3000)
 let currentImage = 0;
